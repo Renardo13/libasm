@@ -78,6 +78,7 @@ ex : je .data
 ### RETURN
 
 Return value with "ret" :
+It’s the same physical register (calling ret by convention), but you can read a selected part of it.
 
 | Registre | Taille  | Hex content        | Decimal content |
 | -------- | ------- | ------------------ | --------------- |
