@@ -90,25 +90,17 @@ Conditions are usefull when you want to jump to a precise line or change the lin
 When a function returns with ret, the calling function reads the return value from rax.
 You can also access any lower portion of rax (depending on how many bits you want) — for example, 32-bit, 16-bit, or 8-bit portions:
 
-Ex :  
+.myfunction1
 
-.myfunction1    
+mov ax, 42    ; bits 0-15 of RAX
 
+ret           ; Return to the calling function
 
-mov ax, 42 (bits de 0-15 de RAX)
+.myfunction2
 
+mov al, 10    ; bits 0-7 of RAX
 
-ret           
-
-    
-.myfunction2  
-
-
-mov al, 10  (bits de 0-7 de RAX)
-
-
-ret          
-
+ret           ; Return to the calling function
     
 
 | Registre | Taille  | Hex content        | Decimal content |
