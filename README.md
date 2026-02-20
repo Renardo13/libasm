@@ -95,17 +95,16 @@ Ex :
 .myfunction1    
 
 
-mov rax, 42  
+mov ax, 42 (bits de 0-15 de RAX)
 
 
 ret           
 
-    --------------
     
 .myfunction2  
 
 
-mov al, 10  
+mov al, 10  (bits de 0-7 de RAX)
 
 
 ret          
