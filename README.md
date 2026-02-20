@@ -25,10 +25,9 @@ When you do `pop` you take the value inside the register, you make a copy and yo
 | Lifetime           | Limited to the function     | Controlled by the program     | Lives only while the CPU executes instructions |
 
 
-## ARGUMENTS
+## ARGUMENTS passed throught functions
 
-Argument are ```pointers``` toward the value in reality.
-Argument passed throught ASM functions calls (in C or other hight levels languages) :
+Argument passed throught ASM functions calls like function(arg1, arg2, ....):
 
 | Argument number | Register | Notes                                        |
 | --------------- | -------- | -------------------------------------------- |
@@ -40,10 +39,17 @@ Argument passed throught ASM functions calls (in C or other hight levels languag
 | 6               | `r9`     | Sixth argument                               |
 | 7+              | Stack    | Additional arguments are passed on the stack |
 
+## Label
+
+Labels are name that you give to a line. You can then change the flow of execution by jump to a name line for example.
+It starts by a '.'
+.data
+.strcmp
+etc.
 
 ## CONDITION
 
-For conditions, `Z`ero `F`lag is checked (ZF).
+Conditions are usefull when you want to jump to a precise line or change the linearity of the code, while loop etc.
 
 | Flag | Meaning                        |
 |------|--------------------------------|
