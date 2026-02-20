@@ -13,9 +13,12 @@ The stack is used in assembly for instance with `push` and `pop`. This is automa
 
 ex :
 
-```push rax``` -> put the value of rax on the stack \
 
--> rax is on the top of the stack now \
+```push rax``` -> put the value of rax on the stack 
+
+
+-> rax is on the top of the stack now 
+
 
 ```pop rdx``` -> take rax and put it in rdx
 
@@ -48,8 +51,14 @@ Argument passed throught ASM functions calls like function(arg1, arg2, ....):
 
 Labels are name that you give to a line. You can then change the flow of execution by jump to a name line for example.
 It starts by a '.'
+
+
 .data
+
+
 .strcmp
+
+
 etc.
 
 ## CONDITION
