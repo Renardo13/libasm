@@ -65,6 +65,14 @@ etc.
 ## CONDITION
 
 Conditions are usefull when you want to jump to a precise line or change the linearity of the code, while loop etc.
+Condition like je, jne, etc. use flag register like ZF CF, etc.
+You have to specifie a label after the condition.
+
+ex:
+
+je .data
+
+
 
 
 | Flag | Meaning                        |
