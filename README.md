@@ -44,12 +44,18 @@ Argument passed throught ASM functions calls like function(arg1, arg2, ....):
 Labels are name that you give to a line. You can then change the flow of execution by jump to a name line for example.
 It starts by a '.'
 .data
+
 .strcmp
+
 etc.
 
 ## CONDITION
 
 Conditions are usefull when you want to jump to a precise line or change the linearity of the code, while loop etc.
+Conditional jump instructions like je, jne, jl, jg check the flags in the RFLAGS register (ZF, SF, OF, etc.), but they do nothing on their own: you need to specify where to jump.
+
+ex : je .data
+
 
 | Flag | Meaning                        |
 |------|--------------------------------|
