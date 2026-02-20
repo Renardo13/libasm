@@ -50,8 +50,9 @@ Argument passed throught ASM functions calls like function(arg1, arg2, ....):
 ## Label
 
 Labels are name that you give to a line. You can then change the flow of execution by jump to a name line for example.
-It starts by a '.'
+It starts by a '.', you give the name that you want
 
+ex :
 
 .data
 
@@ -89,14 +90,15 @@ Conditions are usefull when you want to jump to a precise line or change the lin
 When a function returns with ret, the calling function reads the return value from rax.
 You can also access any lower portion of rax (depending on how many bits you want) — for example, 32-bit, 16-bit, or 8-bit portions:
 
-Ex :
+Ex :  
 
-.myfunction1
-mov rax, 42   
+.myfunction1  
+mov rax, 42  
 ret           
     --------------
-.myfunction2
-mov al, 10     
+    
+.myfunction2  
+mov al, 10  
 ret          
 
     
