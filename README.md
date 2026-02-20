@@ -92,13 +92,22 @@ You can also access any lower portion of rax (depending on how many bits you wan
 
 Ex :  
 
-.myfunction1  
+.myfunction1    
+
+
 mov rax, 42  
+
+
 ret           
+
     --------------
     
 .myfunction2  
+
+
 mov al, 10  
+
+
 ret          
 
     
