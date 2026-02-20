@@ -44,17 +44,12 @@ Argument passed throught ASM functions calls like function(arg1, arg2, ....):
 Labels are name that you give to a line. You can then change the flow of execution by jump to a name line for example.
 It starts by a '.'
 .data
-
 .strcmp
-
 etc.
 
 ## CONDITION
 
 Conditions are usefull when you want to jump to a precise line or change the linearity of the code, while loop etc.
-Conditional jump instructions like je, jne, jl, jg check the flags in the RFLAGS register (ZF, SF, OF, etc.), but they do nothing on their own: you need to specify where to jump.
-
-ex : je .data
 
 
 | Flag | Meaning                        |
@@ -77,8 +72,20 @@ ex : je .data
 
 ### RETURN
 
-Return value with "ret" :
-It’s the same physical register (calling ret by convention), but you can read a selected part of it.
+When a function returns with ret, the calling function reads the return value from rax.
+You can also access any lower portion of rax (depending on how many bits you want) — for example, 32-bit, 16-bit, or 8-bit portions:
+
+Ex :
+
+.myfunction1
+mov rax, 42   
+ret           
+    --------------
+.myfunction2
+mov al, 10     
+ret          
+
+    
 
 | Registre | Taille  | Hex content        | Decimal content |
 | -------- | ------- | ------------------ | --------------- |
